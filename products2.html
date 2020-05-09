@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Products 2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="tableCss.css">
+  
+  <script src="js.js"></script>
+</head>
+<body style="background-image:url('background.jpg')">
+
+
+	<div class="container">
+		<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Main</a></li>
+      <li><a href="products1.html">Products 1</a></li>
+      <li><a href="products2.html">Products 2</a></li>
+      <li><a href="products3.html">Products 3</a></li>
+      <li><a href="products4.html">Products 4</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><button class="button" onclick="ShowDiv()" ></button></li>
+    </ul>
+  </div>
+</nav>
+
+
+<h3>Products 2</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <td>
+        <h3>Cloth 5</h3>
+        <img src="images/p05.jpg">
+        <p>Description: ipsum</p>
+        <p>Price: $20</p>
+        <p><input type="button" name="add" value="Add to Cart" onclick="add('Cloth 5',20)"></p>
+      </td>
+      <td>
+        <h3>Cloth 6</h3>
+        <img src="images/p06.jpg">
+        <p>Description: ipsum</p>
+        <p>Price: $25</p>
+        <p><input type="button" name="add" value="Add to Cart" onclick="add('Cloth 6',25)"></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3>Cloth 7</h3>
+        <img src="images/p07.jpg">
+        <p>Description: ipsum</p>
+        <p>Price: $28</p>
+        <p><input type="button" name="add" value="Add to Cart" onclick="add('Cloth 7',28)"></p>
+      </td>
+      <td>
+        <h3>Cloth 8</h3>
+        <img src="images/p08.jpg">
+        <p>Description: ipsum</p>
+        <p>Price: $28</p>
+        <p><input type="button" name="add" value="Add to Cart" onclick="add('Cloth 8',28)"></p>
+      </td>
+    </tr>
+  </thead>
+</table>
+</div>
+
+
+<!-- Pop up windows -->
+<div id="fade" class="black_overlay">
+</div>
+ <div id="MyDiv" class="white_content">
+  <table id="cart">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+    </tr>
+    <tr>
+      <td colspan="3">Total:</td>
+      <td>$</td>
+    </tr>
+  </table>
+  <div style="text-align: right; cursor: default; height: 40px;">
+    <input type="button" name="close" value="Close" onclick="CloseDiv()"/>
+   </div>
+ </div>
+
+</body>
+</html>

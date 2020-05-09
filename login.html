@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log in</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="tableCss.css">
+<style>
+  .input{ 
+    display:block;
+    text-align: center;
+    margin-top: 20px;
+  }
+  body
+    {
+      background-image: url('background.jpg');
+    }
+</style>
+
+<script src="js.js"></script>
+</head>
+<body>
+
+
+	<div class="container">
+		<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Main</a></li>
+      <li><a href="products1.html">Products 1</a></li>
+      <li><a href="products2.html">Products 2</a></li>
+      <li><a href="products3.html">Products 3</a></li>
+      <li><a href="products4.html">Products 4</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><button class="button" onclick="ShowDiv()" ></button></li>
+    </ul>
+  </div>
+</nav>
+
+  <h2 style="text-align: center;">Login</h2>
+  <form >
+    <div class="input">
+      <label for="username">Username:</label>
+      <input type="text" id="name" name="username">
+    </div>
+    <div class="input">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <div class="input">
+      <input type="submit" value="Login" onclick="login()">
+      <input type="reset" value="Reset"/>
+    </div>
+  </form>
+
+
+  <script>
+    function login()
+    {
+      var text1=document.getElementById("name").value;
+      var text2=document.getElementById("password").value;
+
+      if(text1==null)
+      {
+        alert("You did not fill in your username");
+        return false;
+      }
+      if(text2==null)
+      {
+        alert("You did not fill in your password");
+        return false;
+      }
+      
+      showCookie();
+      window.location.href="products1.html";
+      alert('You have successfully logged in');
+    }
+  </script>
+</body>
+</html>
